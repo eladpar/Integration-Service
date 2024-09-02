@@ -1224,7 +1224,9 @@ bool Config::load_middlewares(
                                << "' must satisfy the required topic type '"
                                << required_type << "', but it does not seem to be "
                                << "available neither in its type registry or inherited "
-                               << "from its 'types-from' reference middlewares" << std::endl;
+                               << "from its 'types-from' reference middlewares" 
+                               << info.types
+                               << std::endl;
 
                         return false;
                     }
